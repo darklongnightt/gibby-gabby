@@ -11,6 +11,7 @@ export default function App() {
     await Font.loadAsync({
       'runy-tunes': require('./assets/fonts/RunyTunesRevisitedNF.ttf'),
       'roboto': require('./assets/fonts/Roboto-Regular.ttf'),
+      'roboto-medium': require('./assets/fonts/Roboto-Medium.ttf'),
       'roboto-bold': require('./assets/fonts/Roboto-Bold.ttf'),
     })
   }
@@ -24,7 +25,7 @@ export default function App() {
     );
   } else {
     return (
-      <Home />
+      <Navigator />
     );
   }
 }

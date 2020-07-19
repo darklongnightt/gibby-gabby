@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function ProfileDetails() {
     return (
         <View>
-            <Text>Review Details</Text>
+            <Text>Profile Details</Text>
         </View>
     )
 }

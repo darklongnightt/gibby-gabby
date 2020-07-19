@@ -1,13 +1,16 @@
 import { StyleSheet } from 'react-native';
 
-const global = StyleSheet.create({
+export default global = StyleSheet.create({
     container: {
-        paddingHorizontal: 24,
         flex: 1,
     },
     title: {
         fontFamily: 'roboto-bold',
         fontSize: 24,
+    },
+    subTitle: {
+        fontFamily: 'roboto-medium',
+        fontSize: 20,
     },
     paragraph: {
         fontFamily: 'roboto',
