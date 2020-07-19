@@ -3,7 +3,7 @@ import { View, Text, FlatList, StyleSheet } from 'react-native'
 import ProfileTile from '../components/ProfileTile';
 import global from '../styles/global';
 
-const ProfileList = () => {
+const ProfileList = ({ navigation }) => {
     const [profiles, setProfiles] = useState([
         { name: 'Royston', gender: 'M', age: 23, id: '1' },
         { name: 'Bo Rui', gender: 'M', age: 22, id: '2' },
@@ -30,7 +30,7 @@ const ProfileList = () => {
                 <FlatList
                     keyExtractor={(item) => item.id}
                     data={profiles}
-                    renderItem={(item) => <ProfileTile profile={item} />}
+                    renderItem={(item) => <ProfileTile profile={item} navigation={navigation} />}
                     numColumns={3}
                 />
             </View>

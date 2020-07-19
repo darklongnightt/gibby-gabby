@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         fontSize: 42,
     },
     startButton: {
-        paddingVertical: 10,
+        paddingVertical: 5,
         marginVertical: 10,
         backgroundColor: '#000',
         color: '#fff',
