@@ -6,7 +6,8 @@ export default global = StyleSheet.create({
     },
     title: {
         fontFamily: 'roboto-bold',
-        fontSize: 24,
+        fontSize: 22,
+        letterSpacing: 1,
     },
     subTitle: {
         fontFamily: 'roboto-medium',

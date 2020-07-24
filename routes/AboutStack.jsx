@@ -1,20 +1,23 @@
+import React from 'react';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
+import { defaultNavigationOptions } from './NavigationOptions';
 import About from '../screens/About';
+import Header from '../shared/Header';
 
 const screens = {
     About: {
         screen: About,
+        navigationOptions: ({ navigation }) => {
+            return {
+                headerTitle: () => <Header navigation={navigation} title='About' />
+            }
+        }
     },
 };
 
-const AboutStack = createStackNavigator(screens, {
-    defaultNavigationOptions: {
-        headerTintColor: '#fff',
-        headerStyle: {
-            backgroundColor: 'grey',
-        }
-    }
+const aboutStack = createStackNavigator(screens, {
+    defaultNavigationOptions,
 });
 
-export default createAppContainer(AboutStack);
+export default createAppContainer(aboutStack);

@@ -3,9 +3,9 @@ import { createAppContainer } from 'react-navigation';
 import HomeStack from './HomeStack';
 import AboutStack from './AboutStack';
 
-const RootDrawerNavigator = createDrawerNavigator({
+const rootDrawerNavigator = createDrawerNavigator({
     Home: { screen: HomeStack },
     About: { screen: AboutStack },
 });
 
-export default createAppContainer(RootDrawerNavigator);
+export default createAppContainer(rootDrawerNavigator);

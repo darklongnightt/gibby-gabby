@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import Navigator from './routes/Drawer';
+import RootNavigator from './routes/Drawer';
 
 export default function App() {
   const [appLoading, setAppLoading] = useState(true);
@@ -24,7 +24,7 @@ export default function App() {
     );
   } else {
     return (
-      <Navigator />
+      <RootNavigator />
     );
   }
 }
