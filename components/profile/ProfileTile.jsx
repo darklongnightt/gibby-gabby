@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
-import global from '../styles/global';
+import global from '../../styles/global';
 
 export default function ProfileTile({ profile, navigation }) {
     const handlePress = () => {

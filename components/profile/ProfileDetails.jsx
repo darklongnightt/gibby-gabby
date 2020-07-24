@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import global from '../styles/global';
+import global from '../../styles/global';
 
 export default function ProfileDetails({ navigation }) {
     return (

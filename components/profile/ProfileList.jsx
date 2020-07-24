@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
-import ProfileTile from '../components/ProfileTile';
-import global from '../styles/global';
+import ProfileTile from './ProfileTile';
+import global from '../../styles/global';
 
 const ProfileList = ({ navigation }) => {
     const [profiles, setProfiles] = useState([
