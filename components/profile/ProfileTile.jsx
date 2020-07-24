@@ -19,10 +19,15 @@ export default function ProfileTile({ profile, navigation }) {
 const styles = StyleSheet.create({
     tile: {
         flex: 1 / 3,
-        backgroundColor: 'gold',
+        backgroundColor: '#fff',
         paddingVertical: 16,
         margin: 1,
         borderRadius: 10,
-        alignItems: 'center'
+        alignItems: 'center',
+        elevation: 2,
+        shadowOffset: { width: 1, height: 1 },
+        shadowColor: '#333',
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
     }
 })
