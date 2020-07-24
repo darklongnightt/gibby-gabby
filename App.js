@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
-import Home from './screens/Home';
-import Navigator from './routes/HomeStack';
+import Navigator from './routes/Drawer';
 
 export default function App() {
   const [appLoading, setAppLoading] = useState(true);
