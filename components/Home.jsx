@@ -1,14 +1,19 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, ImageBackground } from 'react-native'
 
 export default function Home({ navigation }) {
     return (
-        <View style={styles.container}>
+        <ImageBackground
+            source={require('../assets/images/RepeatBanana.jpg')}
+            style={styles.container}
+            resizeMode={"repeat"}
+            imageStyle={{ opacity: 0.5 }}
+        >
             <Text style={styles.title}>Gibby Gabby</Text>
             <TouchableOpacity onPress={() => { navigation.navigate('ProfileList') }}>
                 <Text style={styles.startButton}>Start Chatting</Text>
             </TouchableOpacity>
-        </View>
+        </ImageBackground>
     )
 }
 
@@ -22,15 +27,16 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'runy-tunes',
-        fontSize: 42,
+        fontSize: 64,
+        letterSpacing: 1,
     },
     startButton: {
-        paddingVertical: 5,
+        paddingVertical: 10,
         marginVertical: 10,
         backgroundColor: '#000',
         color: '#fff',
         borderRadius: 10,
-        width: 127,
+        width: 200,
         textAlign: 'center',
         fontFamily: 'roboto-medium',
     }
