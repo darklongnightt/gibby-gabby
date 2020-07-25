@@ -2,9 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Dimensions } from 'react-native';
+import { withNavigation } from 'react-navigation';
 import global from '../styles/global';
 
-export default function Header({ navigation, title }) {
+function Header({ navigation, title }) {
     const openMenu = () => {
         navigation.openDrawer();
     }
@@ -37,3 +38,5 @@ const styles = StyleSheet.create({
         left: 15,
     },
 });
+
+export default withNavigation(Header)

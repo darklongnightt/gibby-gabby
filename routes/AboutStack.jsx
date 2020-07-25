@@ -8,10 +8,8 @@ import Header from '../shared/Header';
 const screens = {
     About: {
         screen: About,
-        navigationOptions: ({ navigation }) => {
-            return {
-                headerTitle: () => <Header navigation={navigation} title='About' />
-            }
+        navigationOptions: {
+            headerTitle: () => <Header title='About' />
         }
     },
 };

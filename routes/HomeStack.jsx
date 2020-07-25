@@ -19,18 +19,14 @@ const screens = {
     },
     ProfileList: {
         screen: ProfileList,
-        navigationOptions: ({navigation}) => {
-            return {
-                headerTitle: () => <Header navigation={navigation} title={'Nearby Me'}/>
-            }
+        navigationOptions: {
+            headerTitle: () => <Header title={'Nearby Me'} />
         }
     },
     ProfileDetails: {
         screen: ProfileDetails,
-        navigationOptions: ({navigation}) => {
-            return {
-                headerTitle: () => <Header navigation={navigation} title={'Profile Details'}/>
-            }
+        navigationOptions: {
+            headerTitle: () => <Header title={'Profile Details'} />
         }
     },
 }
