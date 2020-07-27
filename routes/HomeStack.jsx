@@ -3,8 +3,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import { defaultNavigationOptions } from './NavigationOptions';
 import Home from '../components/Home';
-import ProfileDetails from '../components/profile/ProfileDetails';
-import ProfileList from '../components/profile/ProfileList';
+import UserDetails from '../components/user-catalog/UserDetails';
+import UserList from '../components/user-catalog/UserList';
 import Header from '../shared/Header';
 
 const screens = {
@@ -17,16 +17,16 @@ const screens = {
             }
         }
     },
-    ProfileList: {
-        screen: ProfileList,
+    UserList: {
+        screen: UserList,
         navigationOptions: {
             headerTitle: () => <Header title={'Nearby Me'} />
         }
     },
-    ProfileDetails: {
-        screen: ProfileDetails,
+    UserDetails: {
+        screen: UserDetails,
         navigationOptions: {
-            headerTitle: () => <Header title={'Profile Details'} />
+            headerTitle: () => <Header title={'User Details'} />
         }
     },
 }

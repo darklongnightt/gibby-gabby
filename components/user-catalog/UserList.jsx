@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
-import ProfileTile from './ProfileTile';
+import UserTile from './UserTile';
 import global from '../../styles/global';
 
-const ProfileList = ({ navigation }) => {
-    const [profiles, setProfiles] = useState([
+const UserList = ({ navigation }) => {
+    const [users, setUsers] = useState([
         { name: 'Royston', gender: 'M', age: 23, id: '1' },
         { name: 'Bo Rui', gender: 'M', age: 22, id: '2' },
         { name: 'Cain', gender: 'M', age: 44, id: '3' },
@@ -25,12 +25,12 @@ const ProfileList = ({ navigation }) => {
 
     return (
         <View style={global.container}>
-            <Text style={global.title}>ProfileList</Text>
+            <Text style={global.title}>UserList</Text>
             <View style={styles.tileContainer}>
                 <FlatList
                     keyExtractor={(item) => item.id}
-                    data={profiles}
-                    renderItem={(item) => <ProfileTile profile={item} navigation={navigation} />}
+                    data={users}
+                    renderItem={(item) => <UserTile user={item} navigation={navigation} />}
                     numColumns={3}
                 />
             </View>
@@ -44,4 +44,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ProfileList
+export default UserList

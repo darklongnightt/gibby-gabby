@@ -2,16 +2,16 @@ import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import global from '../../styles/global';
 
-export default function ProfileTile({ profile, navigation }) {
+export default function UserTile({ user, navigation }) {
     const handlePress = () => {
-        navigation.navigate('ProfileDetails', profile.item);
+        navigation.navigate('UserDetails', user.item);
     }
 
     return (
         <TouchableOpacity style={styles.tile} onPress={handlePress}>
-            <Text style={global.subTitle}>{profile.item.name}</Text>
-            <Text style={global.paragraph}>Age: {profile.item.age}</Text>
-            <Text style={global.paragraph}>Gender: {profile.item.gender}</Text>
+            <Text style={global.subTitle}>{user.item.name}</Text>
+            <Text style={global.paragraph}>Age: {user.item.age}</Text>
+            <Text style={global.paragraph}>Gender: {user.item.gender}</Text>
         </TouchableOpacity>
     )
 }

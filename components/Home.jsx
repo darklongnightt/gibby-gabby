@@ -10,7 +10,7 @@ export default function Home({ navigation }) {
             imageStyle={{ opacity: 0.5 }}
         >
             <Text style={styles.title}>Gibby Gabby</Text>
-            <TouchableOpacity onPress={() => { navigation.navigate('ProfileList') }}>
+            <TouchableOpacity onPress={() => { navigation.navigate('UserList') }}>
                 <Text style={styles.startButton}>Start Chatting</Text>
             </TouchableOpacity>
         </ImageBackground>
