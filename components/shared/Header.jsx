@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Dimensions } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import global from '../styles/global';
+import global from '../../styles/global';
 
 function Header({ navigation, title }) {
     const openMenu = () => {

@@ -5,7 +5,7 @@ import { defaultNavigationOptions } from './NavigationOptions';
 import Home from '../components/Home';
 import UserDetails from '../components/user-catalog/UserDetails';
 import UserList from '../components/user-catalog/UserList';
-import Header from '../shared/Header';
+import Header from '../components/shared/Header';
 
 const screens = {
     Home: {

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import global from '../../styles/global';
+
 
 export default function UserTile({ user, navigation }) {
     const handlePress = () => {
