@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { StyleSheet, Text, View, Modal } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
 import global from '../../styles/global';
+import Form from '../shared/Form';
 
 export default function UserDetails({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false);
@@ -13,10 +14,10 @@ export default function UserDetails({ navigation }) {
             <Text style={global.paragraph}>Gender: {navigation.getParam('gender')}</Text>
 
             <MaterialIcons name='chat' size={28} onPress={() => setModalVisible(true)} />
-            <Modal visible={modalVisible}>
-                <View style={styles.container}>
-                    <Text>This is a modal!</Text>
-                    <MaterialIcons name='close' size={28} onPress={() => setModalVisible(false)} />
+            <Modal visible={modalVisible} animationType='slide'>
+                <View style={global.modalContent}>
+                    <Form />
+                    <MaterialIcons name='close' size={28} style={global.modalToggle} onPress={() => setModalVisible(false)} />
                 </View>
             </Modal>
         </View>
@@ -28,5 +29,6 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'column',
         alignItems: 'center',
+        justifyContent: 'center',
     }
 })
