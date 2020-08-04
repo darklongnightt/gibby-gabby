@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Modal } from 'react-native'
+import { StyleSheet, Text, View, Modal, Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
 import global from '../../styles/global';
 import Form from '../shared/Form';
+import { useKeyboardVisible } from '../../hooks/Keyboard';
 
 export default function UserDetails({ navigation }) {
     const [modalVisible, setModalVisible] = useState(false);
+    const keyboardVisible = useKeyboardVisible();
 
     return (
         <View style={styles.container}>
@@ -15,10 +17,14 @@ export default function UserDetails({ navigation }) {
 
             <MaterialIcons name='chat' size={28} onPress={() => setModalVisible(true)} />
             <Modal visible={modalVisible} animationType='slide'>
-                <View style={global.modalContent}>
-                    <Form />
-                    <MaterialIcons name='close' size={28} style={global.modalToggle} onPress={() => setModalVisible(false)} />
-                </View>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                    <View style={global.modalContent}>
+                        <Form />
+                        {!keyboardVisible && (
+                            <MaterialIcons name='close' size={28} style={global.modalToggle} onPress={() => setModalVisible(false)} />
+                        )}
+                    </View>
+                </TouchableWithoutFeedback>
             </Modal>
         </View>
     )

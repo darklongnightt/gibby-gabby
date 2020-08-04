@@ -7,10 +7,10 @@ import global from '../../styles/global';
 const validationSchema = yup.object({
     email: yup.string()
         .required()
-        .email('email must be valid'),
+        .email('Email must be valid'),
     password: yup.string()
         .required()
-        .min(8),
+        .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/, 'Password must be a combination of letters and numbers of minimum length of 8'),
     number: yup.string()
         .required()
         .test('is-num-1-5', 'Must be a number 1 - 5', (val) => {
