@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, FlatList, StyleSheet } from 'react-native'
 import UserTile from './UserTile';
 import global from '../../styles/global';
+import UserLocation from '../shared/UserLocation';
 
 const UserList = ({ navigation }) => {
     const [users, setUsers] = useState([
@@ -25,6 +26,7 @@ const UserList = ({ navigation }) => {
 
     return (
         <View style={global.container}>
+            <UserLocation />
             <Text style={global.title}>UserList</Text>
             <View style={styles.tileContainer}>
                 <FlatList
